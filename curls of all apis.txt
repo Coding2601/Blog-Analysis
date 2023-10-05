@@ -1,0 +1,27 @@
+curl --request GET \
+  --url https://intent-kit-16.hasura.app/api/rest/blogs \
+
+curl --request GET \
+  --url https://localhost:8080/api/blog-search
+  --headers 'query: <ENTER_THE_EXACT_TITLE_OF_ANY_BLOG>'
+
+curl --request GET \
+  --url https://localhost:8080/api/blog-search-word
+  --headers 'query: <ENTER_THE_SUBSTRING_OF_ANY_TITLE>'
+
+curl --request GET \
+  --url https://localhost:8080/api/blog-stats
+
+curl --request GET \
+  --url https://localhost:8080/api/blog-unique
+
+curl --request GET \
+  --url https://localhost:8080/api/blog-longest-title
+
+curl --request POST \
+  --url https://localhost:8080/api/blog-search
+  --d '{"input": <ENTER_THE_EXACT_TITLE_OF_ANY_BLOG>}'
+
+curl --request POST \
+  --url https://localhost:8080/api/blog-search-word
+  --d '{"input": <ENTER_THE_SUBSTRING_OF_ANY_TITLE>}'
